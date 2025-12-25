@@ -2,6 +2,8 @@
 
 一个现代化的 Electron 桌面应用模板，集成 Vue3 + Vite + Element Plus。
 
+![](https://github.com/user-attachments/assets/f11f0e36-c24f-4ada-a71b-b486aa1f9d05)
+
 ## 快速开始
 
 ```bash
