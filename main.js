@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, Tray, Menu } = require('electron');
+const { app, BrowserWindow, ipcMain, Tray, Menu, shell } = require('electron');
 const path = require('path');
 
 const fs = require('fs');
@@ -56,6 +56,12 @@ function createWindow() {
 	mainWindow.on('closed', () => {
 		mainWindow = null;
 	});
+
+	// Open external links in system browser
+	mainWindow.webContents.setWindowOpenHandler(({ url }) => {
+		shell.openExternal(url);
+		return { action: 'deny' };
+	});
 }
 
 const gotTheLock = app.requestSingleInstanceLock();
@@ -101,6 +107,11 @@ ipcMain.on('window-maximize', () => {
 
 ipcMain.on('window-close', () => {
 	mainWindow?.close();
+});
+
+// Open external link in default browser
+ipcMain.on('open-external', (event, url) => {
+	shell.openExternal(url);
 });
 
 // Create system tray icon

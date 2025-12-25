@@ -43,3 +43,7 @@ npm run dist
 - 系统托盘支持
 - 单实例锁定
 - 开发/生产环境自动切换
+
+## LICENSE
+
+[Apache-2.0 license](./LICENSE)

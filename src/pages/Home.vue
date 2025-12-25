@@ -2,12 +2,10 @@
   <div class="home-container">
     <div class="home-content">
       <div class="logo-wrapper">
-        <el-icon :size="40" color="#fff">
-          <Lightning />
-        </el-icon>
+        <img src="@/assets/images/icon.png" alt="logo" />
       </div>
 
-      <h1 class="title">Electron 模板</h1>
+      <h1 class="title">Electron Template</h1>
 
       <p class="description">
         一个现代化的 Electron 应用模板，集成 Vue3、Vite 和 Element Plus。
@@ -19,20 +17,17 @@
 
       <div class="button-group">
         <el-button type="primary" size="large">开始使用</el-button>
-        <el-button size="large">了解更多</el-button>
+        <a href="https://github.com/anghunk/electron-template" target="_blank">
+          <el-button size="large">了解更多</el-button>
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Lightning } from "@element-plus/icons-vue";
-
 export default {
   name: "Home",
-  components: {
-    Lightning,
-  },
   data() {
     return {
       version: "",
