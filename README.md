@@ -13,8 +13,17 @@ npm install
 # 开发模式（一键启动 Vite + Electron）
 npm run dev
 
-# 打包应用
+# 打包 Windows
 npm run dist
+
+# 打包 macOS
+npm run dist -- --mac
+
+# 打包 Linux
+npm run dist -- --linux
+
+# 同时打包多个平台
+npm run dist -- --mac --linux
 ```
 
 ## 技术栈
