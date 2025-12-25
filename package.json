@@ -1,0 +1,64 @@
+{
+  "name": "electron-template",
+  "version": "0.0.1",
+  "description": "A modern Electron app template with Vue3, Vite and Element Plus integration.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"wait-on tcp:5179 && cross-env NODE_ENV=development electron .\" -k -n vite,electron -c cyan,green",
+    "dev:vite": "vite",
+    "dev:electron": "cross-env NODE_ENV=development electron .",
+    "pack": "vite build && electron-builder --dir",
+    "dist": "vite build && electron-builder"
+  },
+  "keywords": [
+    "electron",
+    "template",
+    "vue3",
+    "vite",
+    "element-plus"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0",
+    "vite": "^6.0.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "element-plus": "^2.9.9",
+    "@element-plus/icons-vue": "^2.3.1",
+    "less": "^4.2.0",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.electron.template",
+    "productName": "Electron Template",
+    "files": [
+      "dist-ui/**/*",
+      "build/icon.png",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png"
+    }
+  }
+}

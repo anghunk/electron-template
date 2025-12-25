@@ -1,0 +1,39 @@
+// TitleBar 样式
+
+.title-bar {
+  height: 32px;
+  background: var(--el-fill-color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.title-text {
+  padding: 0 16px;
+  font-size: 12px;
+  color: var(--el-text-color-secondary);
+  font-weight: 500;
+}
+
+.window-controls {
+  display: flex;
+  height: 100%;
+}
+
+.control-btn {
+  height: 32px;
+  width: 40px;
+  border-radius: 0;
+
+  &:hover {
+    background: var(--el-fill-color-darker) !important;
+  }
+}
+
+.close-btn {
+  &:hover {
+    background: var(--el-color-primary) !important;
+    color: #fff;
+  }
+}
