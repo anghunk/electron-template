@@ -62,6 +62,17 @@ function createWindow() {
 		shell.openExternal(url);
 		return { action: 'deny' };
 	});
+
+	// Disable refresh shortcuts (Ctrl+R, F5, Ctrl+Shift+R)
+	mainWindow.webContents.on('before-input-event', (event, input) => {
+		if (
+			(input.control && input.key.toLowerCase() === 'r') ||
+			input.key === 'F5' ||
+			(input.control && input.shift && input.key.toLowerCase() === 'r')
+		) {
+			event.preventDefault();
+		}
+	});
 }
 
 const gotTheLock = app.requestSingleInstanceLock();
