@@ -18,12 +18,6 @@
         </a>
       </div>
 
-      <!-- DaisyUI 测试组件 -->
-      <div class="mt-8 space-y-4">
-        <button class="btn btn-primary">DaisyUI 主按钮</button>
-        <button class="btn btn-secondary">DaisyUI 次按钮</button>
-        <button class="btn btn-accent">DaisyUI 强调按钮</button>
-      </div>
     </div>
   </div>
 </template>
@@ -38,5 +32,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "@/styles/home.less";
+@import "@/styles/page/home.less";
 </style>

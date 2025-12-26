@@ -8,14 +8,6 @@ const routes = [
 		},
 	},
 	{
-		path: '/settings',
-		name: 'Settings',
-		component: () => import('@/views/Settings/index.vue'),
-		meta: {
-			title: '设置',
-		},
-	},
-	{
 		path: '/about',
 		name: 'About',
 		component: () => import('@/views/About/index.vue'),

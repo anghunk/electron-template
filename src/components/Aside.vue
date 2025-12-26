@@ -27,5 +27,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "@/styles/aside.less";
+@import "@/styles/components/aside.less";
 </style>
