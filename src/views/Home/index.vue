@@ -11,10 +11,6 @@
         一个现代化的 Electron 应用模板，集成 Vue3、Vite 和 Element Plus。
       </p>
 
-      <div class="version-wrapper">
-        <el-tag type="primary" size="large">v{{ version }}</el-tag>
-      </div>
-
       <div class="button-group">
         <el-button type="primary" size="large">开始使用</el-button>
         <a href="https://github.com/anghunk/electron-template" target="_blank">
@@ -29,12 +25,7 @@
 export default {
   name: "Home",
   data() {
-    return {
-      version: "",
-    };
-  },
-  async mounted() {
-    this.version = await window.api.getAppVersion();
+    return {};
   },
 };
 </script>

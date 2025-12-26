@@ -24,6 +24,11 @@
         <label>E-mail</label>
         <div class="input-content">anghunk@gmail.com</div>
       </li>
+
+      <li>
+        <label>Version</label>
+        <div class="input-content">{{ version }}</div>
+      </li>
     </ul>
   </div>
 </template>
@@ -31,6 +36,14 @@
 <script>
 export default {
   name: "About",
+  data() {
+    return {
+      version: "",
+    };
+  },
+  async mounted() {
+    this.version = await window.api.getAppVersion();
+  },
 };
 </script>
 
