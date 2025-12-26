@@ -1,6 +1,6 @@
 {
   "name": "electron-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A modern Electron app template with Vue3, Vite and Element Plus integration.",
   "main": "main.js",
   "scripts": {
