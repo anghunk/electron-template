@@ -1,6 +1,6 @@
 {
   "name": "electron-template",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A modern Electron app template with Vue3, Vite, Element Plus and DaisyUI integration.",
   "main": "main.js",
   "scripts": {
@@ -16,8 +16,7 @@
     "template",
     "vue3",
     "vite",
-    "element-plus",
-    "daisyui"
+    "element-plus"
   ],
   "author": "",
   "license": "MIT",
@@ -27,7 +26,6 @@
     "autoprefixer": "^10.4.23",
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
-    "daisyui": "^5.5.14",
     "electron": "^33.0.0",
     "electron-builder": "^25.0.0",
     "element-plus": "^2.9.9",
