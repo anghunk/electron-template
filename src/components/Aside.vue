@@ -1,6 +1,6 @@
 <template>
   <aside class="aside-nav">
-    <div class="nav-header">
+    <div class="nav-header"> 
       <span class="title">Electron Template</span>
     </div>
     <nav class="nav-menu">

@@ -2,7 +2,28 @@
   <div class="layout-title">关于</div>
   <div class="about">
     <ul class="list">
-      <li>Github: <a href="https://github.com/anghunk/electron-template" target="_blank">https://github.com/anghunk/electron-template</a></li>
+      <li>
+        <label>Github</label>
+        <div class="input-content">
+          <a href="https://github.com/anghunk/electron-template" target="_blank"
+            >https://github.com/anghunk/electron-template</a
+          >
+        </div>
+      </li>
+
+      <li>
+        <label>Author</label>
+        <div class="input-content">
+          <a href="https://github.com/anghunk" target="_blank"
+            >https://github.com/anghunk</a
+          >
+        </div>
+      </li>
+
+      <li>
+        <label>E-mail</label>
+        <div class="input-content">anghunk@gmail.com</div>
+      </li>
     </ul>
   </div>
 </template>
