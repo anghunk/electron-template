@@ -38,10 +38,11 @@ npm run dist -- --mac --linux
 
 ```
 ├── src/                # 前端源码
+│   ├── assets/         # 静态资源
 │   ├── components/     # 组件
-│   ├── pages/          # 页面
 │   ├── router/         # 路由
-│   └── styles/         # 样式
+│   ├── styles/         # 样式
+│   └── views/          # 页面
 ├── build/              # 构建资源（图标等）
 ├── main.js             # Electron 主进程
 ├── preload.js          # 预加载脚本
