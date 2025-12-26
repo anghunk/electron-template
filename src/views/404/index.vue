@@ -16,5 +16,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "@/styles/404.less";
+@import "@/styles/page/404.less";
 </style>

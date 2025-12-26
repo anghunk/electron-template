@@ -7,10 +7,4 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [
-    require('daisyui'),
-  ],
-  daisyui: {
-    themes: ["light", "dark", "cupcake"], // 可以根据需要添加更多主题
-  },
 }

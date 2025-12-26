@@ -41,5 +41,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "@/styles/titlebar.less";
+@import "@/styles/components/titlebar.less";
 </style>

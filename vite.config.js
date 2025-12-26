@@ -9,6 +9,9 @@ export default defineConfig({
   server: {
     port: 5179,
     strictPort: true, // Exit if port is already in use
+    hmr: {
+      overlay: false,
+    },
   },
   resolve: {
     alias: {
