@@ -1,16 +1,46 @@
-/* Element Plus 主题色配置 - #2953FF */
+/* Helpful Warmth Theme - Inspired by Claude */
 :root {
-  --el-color-primary: #2953FF;
-  --el-color-primary-light-1: #3e64ff;
-  --el-color-primary-light-2: #5375ff;
-  --el-color-primary-light-3: #6986ff;
-  --el-color-primary-light-4: #7e97ff;
-  --el-color-primary-light-5: #94a9ff;
-  --el-color-primary-light-6: #a9baff;
-  --el-color-primary-light-7: #bfcbff;
-  --el-color-primary-light-8: #d4dcff;
-  --el-color-primary-light-9: #eaedff;
-  --el-color-primary-dark-2: #2142cc;
+  /* Theme Colors */
+  --color-primary: #d97757;
+  --color-secondary: #6b6b6b;
+  --color-accent: #da7756;
+  --color-background: #fcf7f1;
+  --color-surface: #ffffff;
+  --color-text: #383838;
+  --color-muted: #9e9e9e;
+  --color-success: #4d8b55;
+  --color-warning: #d49e2a;
+  --color-error: #d15648;
+  --color-info: #4a8bb3;
+
+  /* Typography */
+  --font-heading: "Merriweather", serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* UI Config */
+  --radius: 1rem;
+  --border-width: 1px;
+
+  /* Element Plus Theme Override */
+  --el-color-primary: #d97757;
+  --el-color-primary-light-1: #dd8568;
+  --el-color-primary-light-2: #e19379;
+  --el-color-primary-light-3: #e5a18a;
+  --el-color-primary-light-4: #e9af9b;
+  --el-color-primary-light-5: #ecbdab;
+  --el-color-primary-light-6: #f0cbbc;
+  --el-color-primary-light-7: #f4d9cd;
+  --el-color-primary-light-8: #f8e7de;
+  --el-color-primary-light-9: #fcf5ef;
+  --el-color-primary-dark-2: #ae5f46;
+  --el-bg-color: #fcf7f1;
+  --el-fill-color-light: #fcf7f1;
+  --el-fill-color-lighter: #fdfaf6;
+  --el-fill-color-darker: #f5ebe1;
+  --el-text-color-primary: #383838;
+  --el-text-color-secondary: #6b6b6b;
+  --el-border-color-lighter: #e8ddd3;
+  --el-color-danger: #d15648;
 }
 
 /* 全局基础样式 */
@@ -29,10 +59,11 @@ body,
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 img {
@@ -52,14 +83,18 @@ li {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFFFFF;
+  background: var(--color-surface);
   border-radius: 0
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #eeeeee;
-  border-radius: 2px;
+  background: var(--el-fill-color-darker);
+  border-radius: 4px;
   transition: all 0.1s linear
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
 }
 
 // Layout 布局样式
@@ -69,9 +104,9 @@ li {
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
-  background: var(--el-bg-color);
-  color: var(--el-text-color-primary);
-  border: 1px solid var(--el-border-color-lighter);
+  background: var(--color-background);
+  color: var(--color-text);
+  border: var(--border-width) solid var(--el-border-color-lighter);
 }
 
 .layout-main {
@@ -88,7 +123,9 @@ li {
 }
 
 .layout-title {
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 24px;
   margin-bottom: 1em;
+  color: var(--color-text);
 }

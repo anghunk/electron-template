@@ -1,19 +1,21 @@
-// TitleBar 样式
+// TitleBar 样式 - Helpful Warmth Theme
 
 .title-bar {
   height: 32px;
-  background: var(--el-fill-color-light);
+  background: var(--color-background);
   display: flex;
   justify-content: space-between;
   align-items: center;
   user-select: none;
+  border-bottom: var(--border-width) solid var(--el-border-color-lighter);
 }
 
 .title-text {
   padding: 0 16px;
+  font-family: var(--font-heading);
   font-size: 12px;
-  color: var(--el-text-color-secondary);
-  font-weight: 500;
+  color: var(--color-secondary);
+  font-weight: 600;
 }
 
 .window-controls {
@@ -25,15 +27,17 @@
   height: 32px;
   width: 40px;
   border-radius: 0;
+  color: var(--color-secondary);
 
   &:hover {
     background: var(--el-fill-color-darker) !important;
+    color: var(--color-text);
   }
 }
 
 .close-btn {
   &:hover {
-    background: var(--el-color-danger) !important;
-    color: #fff;
+    background: var(--color-error) !important;
+    color: var(--color-surface);
   }
 }

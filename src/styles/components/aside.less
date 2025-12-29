@@ -3,11 +3,12 @@
   height: calc(100% - 32px);
   overflow-y: auto;
   margin: 16px;
-  background: #fff;
+  background: var(--color-surface);
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(217, 119, 87, 0.08), 0 1px 4px rgba(56, 56, 56, 0.04);
+  border: var(--border-width) solid var(--el-border-color-lighter);
 
   &::-webkit-scrollbar {
     display: none;
@@ -21,17 +22,18 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: var(--border-width) solid var(--el-border-color-lighter);
 
   img {
     max-width: 50px;
   }
 
   .title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    letter-spacing: 0.5px;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: 0.3px;
     white-space: nowrap;
   }
 }
@@ -49,11 +51,11 @@
   align-items: center;
   gap: 10px;
   padding: 0 16px;
-  height: 40px;
-  border-radius: 6px;
-  color: #666;
+  height: 42px;
+  border-radius: calc(var(--radius) * 0.5);
+  color: var(--color-secondary);
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 
   .icon {
     width: 25px;
@@ -75,13 +77,13 @@
   }
 
   &:hover {
-    background: #f5f7fa;
-    color: #333;
+    background: var(--el-fill-color-darker);
+    color: var(--color-text);
   }
 
   &.active {
-    background: var(--el-color-primary);
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(41, 83, 255, 0.35);
+    background: var(--color-primary);
+    color: var(--color-surface);
+    box-shadow: 0 4px 12px rgba(217, 119, 87, 0.35);
   }
 }

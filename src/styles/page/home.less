@@ -1,4 +1,4 @@
-// Home 首页样式
+// Home 首页样式 - Helpful Warmth Theme
 
 .home-container {
   height: 100%;
@@ -6,20 +6,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: var(--color-background);
 }
 
 .home-content {
   text-align: center;
+  padding: 40px;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(217, 119, 87, 0.08);
+  border: var(--border-width) solid var(--el-border-color-lighter);
 }
 
 .logo-wrapper {
   width: 80px;
   height: 80px;
-  border-radius: 16px;
+  border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
+  background: var(--el-fill-color-lighter);
+  box-shadow: 0 2px 8px rgba(217, 119, 87, 0.12);
 
   img {
     width: 100%;
@@ -27,17 +35,19 @@
 }
 
 .title {
+  font-family: var(--font-heading);
   font-size: 28px;
-  font-weight: 600;
-  color: var(--el-text-color-primary);
+  font-weight: 700;
+  color: var(--color-text);
   margin-bottom: 16px;
 }
 
 .description {
-  color: var(--el-text-color-secondary);
+  color: var(--color-secondary);
   max-width: 400px;
   margin: 0 auto 24px;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 15px;
 }
 
 .version-wrapper {
@@ -48,4 +58,8 @@
   display: flex;
   gap: 16px;
   justify-content: center;
+
+  a {
+    text-decoration: none;
+  }
 }

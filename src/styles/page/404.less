@@ -1,52 +1,61 @@
+// 404 页面样式 - Helpful Warmth Theme
+
 .not-found {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
+  background: var(--color-background);
 }
 
 .content {
   text-align: center;
-  padding: 40px;
-  background: #fff;
-  border-radius: 20px;
+  padding: 48px 56px;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(217, 119, 87, 0.08);
+  border: var(--border-width) solid var(--el-border-color-lighter);
 }
 
 .error-code {
-  font-size: 60px;
-  font-weight: 500;
-  color: var(--el-color-primary);
+  font-family: var(--font-heading);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--color-primary);
   line-height: 1;
   margin-bottom: 16px;
 }
 
 .error-title {
+  font-family: var(--font-heading);
   font-size: 24px;
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: var(--color-text);
   margin-bottom: 12px;
 }
 
 .error-desc {
-  font-size: 14px;
-  color: #999;
+  font-size: 15px;
+  color: var(--color-muted);
   margin-bottom: 32px;
+  line-height: 1.6;
 }
 
 .back-btn {
   display: inline-block;
   padding: 12px 32px;
-  background: var(--el-color-primary);
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-surface);
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: calc(var(--radius) * 1.5);
   font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(41, 83, 255, 0.35);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(217, 119, 87, 0.3);
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(41, 83, 255, 0.45);
+    box-shadow: 0 6px 20px rgba(217, 119, 87, 0.4);
+    background: var(--color-accent);
   }
 }
