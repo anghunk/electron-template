@@ -1,6 +1,6 @@
 # Electron Template
 
-一个现代化的 Electron 桌面应用模板，集成 Vue3 + Vite + Element Plus。
+现代化的 Electron 桌面应用模板，集成 Vue3、Vite 和 Element Plus，采用温暖优雅的 UI 设计。
 
 ![](https://github.com/user-attachments/assets/3e20060b-e09e-474a-bad1-0dcee75e5648)
 
@@ -10,20 +10,13 @@
 # 安装依赖
 npm install
 
-# 开发模式（一键启动 Vite + Electron）
+# 开发模式
 npm run dev
 
-# 打包 Windows
-npm run dist
-
-# 打包 macOS
-npm run dist -- --mac
-
-# 打包 Linux
-npm run dist -- --linux
-
-# 同时打包多个平台
-npm run dist -- --mac --linux
+# 打包应用
+npm run dist              # Windows
+npm run dist -- --mac     # macOS
+npm run dist -- --linux   # Linux
 ```
 
 ## 技术栈
@@ -37,24 +30,39 @@ npm run dist -- --mac --linux
 ## 项目结构
 
 ```
-├── src/                # 前端源码
-│   ├── components/     # 组件
-│   ├── pages/          # 页面
-│   ├── router/         # 路由
-│   └── styles/         # 样式
-├── build/              # 构建资源（图标等）
-├── main.js             # Electron 主进程
-├── preload.js          # 预加载脚本
-└── vite.config.js      # Vite 配置
+├── src/
+│   ├── components/      # UI 组件（TitleBar, Aside）
+│   ├── views/           # 页面视图
+│   ├── router/          # 路由配置
+│   ├── styles/          # 主题样式
+│   └── main.js          # Vue 入口
+├── build/               # 构建资源（图标）
+├── main.js              # Electron 主进程
+├── preload.js           # 预加载脚本
+└── vite.config.js       # Vite 配置
 ```
 
-## 功能特性
+## 核心功能
 
-- 无边框窗口 + 自定义标题栏
-- 系统托盘支持
-- 单实例锁定
-- 开发/生产环境自动切换
+**桌面体验**: 无边框窗口、自定义标题栏、系统托盘  
+**开发友好**: Vite 热重载、一键启动开发环境  
+**跨平台**: 支持 Windows、macOS、Linux 打包  
+**单实例**: 防止应用重复启动
 
-## LICENSE
+## 自定义主题
+
+修改 `src/styles/index.less` 中的 CSS 变量即可定制主题：
+
+```css
+:root {
+  --color-primary: #d97757;     /* 主色调 */
+  --color-background: #fcf7f1;  /* 背景色 */
+  --font-heading: "Merriweather", serif;
+  --font-body: "DM Sans", sans-serif;
+  --radius: 1rem;               /* 圆角半径 */
+}
+```
+
+## License
 
 [Apache-2.0 license](./LICENSE)
