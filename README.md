@@ -2,7 +2,7 @@
 
 一个现代化的 Electron 桌面应用模板，集成 Vue3 + Vite + Element Plus。
 
-![](https://github.com/user-attachments/assets/3e20060b-e09e-474a-bad1-0dcee75e5648)
+![](https://github.com/user-attachments/assets/07b0a4d1-6c4a-4f9c-9ec2-d45239062b9c)
 
 ## 快速开始
 
