@@ -12,7 +12,9 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Aside: typeof import('./src/components/Aside.vue')['default']
+    ElAlert: typeof import('element-plus/es')['ElAlert']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElSwitch: typeof import('element-plus/es')['ElSwitch']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TitleBar: typeof import('./src/components/TitleBar.vue')['default']

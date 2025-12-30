@@ -1,51 +1,56 @@
 <template>
   <div class="layout-title">关于</div>
   <div>
-    <ul class="flex flex-col">
-      <li
-        class="bg-surface border border-border-light rounded-theme-sm px-[18px] min-h-[48px] flex items-center justify-between mb-3 transition-all duration-200 hover:shadow-card-hover"
-      >
-        <label class="font-semibold text-text font-heading">Github</label>
-        <div class="text-muted no-underline">
-          <a
-            href="https://github.com/anghunk/electron-template"
-            target="_blank"
-            class="text-primary no-underline transition-colors duration-200 hover:text-accent"
-          >
-            https://github.com/anghunk/electron-template
-          </a>
+    <!-- 应用信息 -->
+    <div class="mb-6 bg-surface rounded-lg border border-border-light p-6">
+      <h2 class="text-lg font-semibold text-text mb-4">应用信息</h2>
+      <div class="space-y-3 text-sm">
+        <div class="flex justify-between">
+          <span class="text-secondary">应用名称：</span>
+          <span class="text-text font-medium">Electron Template</span>
         </div>
-      </li>
-
-      <li
-        class="bg-surface border border-border-light rounded-theme-sm px-[18px] min-h-[48px] flex items-center justify-between mb-3 transition-all duration-200 hover:shadow-card-hover"
-      >
-        <label class="font-semibold text-text font-heading">Author</label>
-        <div class="text-muted no-underline">
-          <a
-            href="https://github.com/anghunk"
-            target="_blank"
-            class="text-primary no-underline transition-colors duration-200 hover:text-accent"
-          >
-            https://github.com/anghunk
-          </a>
+        <div class="flex justify-between">
+          <span class="text-secondary">版本号：</span>
+          <span class="text-text font-medium">v{{ version }}</span>
         </div>
-      </li>
-
-      <li
-        class="bg-surface border border-border-light rounded-theme-sm px-[18px] min-h-[48px] flex items-center justify-between mb-3 transition-all duration-200 hover:shadow-card-hover"
-      >
-        <label class="font-semibold text-text font-heading">E-mail</label>
-        <div class="text-muted no-underline">anghunk@gmail.com</div>
-      </li>
-
-      <li
-        class="bg-surface border border-border-light rounded-theme-sm px-[18px] min-h-[48px] flex items-center justify-between mb-3 transition-all duration-200 hover:shadow-card-hover"
-      >
-        <label class="font-semibold text-text font-heading">Version</label>
-        <div class="text-muted no-underline">{{ version }}</div>
-      </li>
-    </ul>
+        <div class="flex justify-between">
+          <span class="text-secondary">邮箱：</span>
+          <span class="text-text font-medium">
+            <a
+              href="mailto:anghunk@gmail.com"
+              target="_blank"
+              class="text-primary no-underline transition-colors duration-200 hover:text-accent"
+            >
+              anghunk@gmail.com
+            </a>
+          </span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-secondary">开发团队：</span>
+          <span class="text-text font-medium">
+            <a
+              href="https://github.com/anghunk"
+              target="_blank"
+              class="text-primary no-underline transition-colors duration-200 hover:text-accent"
+            >
+              https://github.com/anghunk
+            </a>
+          </span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-secondary">Github：</span>
+          <span class="text-text font-medium">
+            <a
+              href="https://github.com/anghunk/electron-template"
+              target="_blank"
+              class="text-primary no-underline transition-colors duration-200 hover:text-accent"
+            >
+              https://github.com/anghunk/electron-template
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

@@ -7,6 +7,38 @@ import fs from 'fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// 设置文件路径
+const settingsPath = path.join(app.getPath('userData'), 'settings.json');
+
+// 默认设置
+const defaultSettings = {
+	closeToTray: true, // 关闭窗口时最小化到托盘
+};
+
+// 读取设置
+function getSettings() {
+	try {
+		if (fs.existsSync(settingsPath)) {
+			const data = fs.readFileSync(settingsPath, 'utf-8');
+			return { ...defaultSettings, ...JSON.parse(data) };
+		}
+	} catch (error) {
+		console.error('Error reading settings:', error);
+	}
+	return defaultSettings;
+}
+
+// 保存设置
+function saveSettings(settings) {
+	try {
+		fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
+		return true;
+	} catch (error) {
+		console.error('Error saving settings:', error);
+		return false;
+	}
+}
+
 // Set App User Model ID for Windows Taskbar Icon
 app.setAppUserModelId('com.electron.template');
 
@@ -107,6 +139,15 @@ ipcMain.handle('get-app-version', () => {
 	return app.getVersion();
 });
 
+// 设置管理
+ipcMain.handle('get-settings', () => {
+	return getSettings();
+});
+
+ipcMain.handle('save-settings', (event, settings) => {
+	return saveSettings(settings);
+});
+
 // Window Controls
 ipcMain.on('window-minimize', () => {
 	mainWindow?.minimize();
@@ -121,7 +162,14 @@ ipcMain.on('window-maximize', () => {
 });
 
 ipcMain.on('window-close', () => {
-	mainWindow?.close();
+	const settings = getSettings();
+	if (settings.closeToTray) {
+		// 最小化到托盘
+		mainWindow?.hide();
+	} else {
+		// 直接退出应用
+		app.quit();
+	}
 });
 
 // Open external link in default browser
@@ -146,6 +194,25 @@ function createTray() {
 		},
 		{ type: 'separator' },
 		{
+			label: `版本（v${app.getVersion()}）`,
+			enabled: false,
+		},
+		{
+			label: '检查更新',
+			click: () => {
+				const repoUrl = 'https://github.com/anghunk/electron-template/releases';
+				shell.openExternal(repoUrl);
+			},
+		},
+		{ type: 'separator' },
+		{
+			label: '重启',
+			click: () => {
+				app.relaunch();
+				app.quit();
+			},
+		},
+		{
 			label: '退出',
 			click: () => {
 				app.quit();
@@ -158,19 +225,18 @@ function createTray() {
 
 	// Click on tray icon to show window
 	tray.on('click', () => {
-		if (mainWindow) {
-			if (mainWindow.isVisible()) {
-				mainWindow.hide();
-			} else {
-				mainWindow.show();
-				mainWindow.focus();
-			}
+		if (mainWindow && !mainWindow.isVisible()) {
+			mainWindow.show();
+			mainWindow.focus();
 		}
 	});
 }
 
 app.on('window-all-closed', () => {
-	if (process.platform !== 'darwin') {
+	const settings = getSettings();
+	// 如果设置为关闭到托盘，允许应用在没有窗口的情况下继续运行
+	// 否则遵循默认行为（macOS 保持运行，其他平台退出）
+	if (!settings.closeToTray && process.platform !== 'darwin') {
 		app.quit();
 	}
 });

@@ -1,7 +1,7 @@
 <template>
   <div class="h-full flex flex-col items-center justify-center bg-background">
     <div
-      class="text-center p-10 bg-surface rounded-theme shadow-card border border-border-light"
+      class="text-center p-10"
     >
       <div
         class="w-20 h-20 rounded-theme flex items-center justify-center mx-auto mb-6 bg-fill-light shadow-logo"

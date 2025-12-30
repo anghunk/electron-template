@@ -15,6 +15,14 @@ const routes = [
 			title: '关于',
 		},
 	},
+	{
+		path: '/settings',
+		name: 'Settings',
+		component: () => import('@/views/Settings/index.vue'),
+		meta: {
+			title: '设置',
+		},
+	},
 	// 404 页面 - 匹配所有未定义的路由
 	{
 		path: '/:pathMatch(.*)*',
