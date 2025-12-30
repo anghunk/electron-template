@@ -1,7 +1,11 @@
-const { app, BrowserWindow, ipcMain, Tray, Menu, shell } = require('electron');
-const path = require('path');
+import { app, BrowserWindow, ipcMain, Tray, Menu, shell } from 'electron';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
 
-const fs = require('fs');
+// ES6 模块中获取 __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Set App User Model ID for Windows Taskbar Icon
 app.setAppUserModelId('com.electron.template');
@@ -29,7 +33,7 @@ function createWindow() {
 		icon: getIconPath(),
 		show: false, // Don't show until ready
 		webPreferences: {
-			preload: path.join(__dirname, 'preload.js'),
+			preload: path.join(__dirname, 'preload.cjs'),
 			nodeIntegration: false,
 			contextIsolation: true,
 		},
