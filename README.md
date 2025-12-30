@@ -2,7 +2,7 @@
 
 现代化的 Electron 桌面应用模板，集成 Vue3、Vite、Element Plus 和 Tailwind CSS，采用温暖优雅的 UI 设计。
 
-![](https://github.com/user-attachments/assets/07b0a4d1-6c4a-4f9c-9ec2-d45239062b9c)
+![](https://github.com/user-attachments/assets/3fffc4ef-27df-47e0-b5c6-5fe1a9c38a06)
 
 ## 快速开始
 
