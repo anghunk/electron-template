@@ -1,10 +1,30 @@
 <template>
-  <div class="title-bar" style="-webkit-app-region: drag">
-    <div class="title-text">Electron Template</div>
-    <div class="window-controls" style="-webkit-app-region: no-drag">
-      <el-button @click="minimize" :icon="Minus" text class="control-btn" />
-      <el-button @click="maximize" :icon="FullScreen" text class="control-btn" />
-      <el-button @click="close" :icon="Close" text class="control-btn close-btn" />
+  <div
+    class="h-8 bg-background flex justify-between items-center select-none border-b border-border-light"
+    style="-webkit-app-region: drag"
+  >
+    <div class="px-4 font-heading text-xs text-secondary font-semibold">
+      Electron Template
+    </div>
+    <div class="flex h-full" style="-webkit-app-region: no-drag">
+      <el-button
+        @click="minimize"
+        :icon="Minus"
+        text
+        class="h-8 w-10 !rounded-none text-secondary hover:!bg-fill-dark hover:!text-text"
+      />
+      <el-button
+        @click="maximize"
+        :icon="FullScreen"
+        text
+        class="h-8 w-10 !rounded-none text-secondary hover:!bg-fill-dark hover:!text-text"
+      />
+      <el-button
+        @click="close"
+        :icon="Close"
+        text
+        class="h-8 w-10 !rounded-none text-secondary hover:!bg-error hover:!text-surface"
+      />
     </div>
   </div>
 </template>
@@ -39,7 +59,3 @@ export default {
   },
 };
 </script>
-
-<style lang="less" scoped>
-@import "@/styles/components/titlebar.less";
-</style>
