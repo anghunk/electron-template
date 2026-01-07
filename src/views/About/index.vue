@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-title">关于</div>
+  <h1 class="text-2xl font-heading font-bold text-text mb-6">关于</h1>
   <div>
     <!-- 应用信息 -->
     <div class="mb-6 bg-surface rounded-lg border border-border-light p-6">
