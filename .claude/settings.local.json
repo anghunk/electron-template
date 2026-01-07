@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(del \"d:\\\\zsh-code\\\\seo\\\\demo\\\\GitHub-Projects\\\\electron-template\\\\暗黑模式实现总结.md\" \"d:\\\\zsh-code\\\\seo\\\\demo\\\\GitHub-Projects\\\\electron-template\\\\暗黑模式功能说明.md\" \"d:\\\\zsh-code\\\\seo\\\\demo\\\\GitHub-Projects\\\\electron-template\\\\暗黑模式测试说明.md\")"
+    ]
+  }
+}

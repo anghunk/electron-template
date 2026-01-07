@@ -13,6 +13,8 @@ const settingsPath = path.join(app.getPath('userData'), 'settings.json');
 // 默认设置
 const defaultSettings = {
 	closeToTray: true, // 关闭窗口时最小化到托盘
+	darkMode: false, // 暗黑模式设置
+	followSystem: false, // 是否跟随系统主题
 };
 
 // 读取设置

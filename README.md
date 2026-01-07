@@ -1,6 +1,6 @@
 # Electron Template
 
-现代化的 Electron 桌面应用模板，集成 Vue3、Vite、Element Plus 和 Tailwind CSS，采用温暖优雅的 UI 设计。
+现代化的 Electron 桌面应用模板，采用温暖优雅的 UI 设计。
 
 ![preview](https://github.com/user-attachments/assets/a5749b54-3688-48d6-9a4f-1b1fc4b54319)
 
@@ -26,6 +26,7 @@ npm run dist -- --linux   # Linux
 - Vite 6
 - Element Plus
 - Tailwind CSS
+- Phosphor Icons
 - Vue Router
 
 ## 项目结构

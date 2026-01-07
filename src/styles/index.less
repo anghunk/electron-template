@@ -5,7 +5,7 @@
 
 /* Helpful Warmth Theme - Inspired by Claude */
 :root {
-  /* Theme Colors */
+  /* Light Theme Colors */
   --color-primary: #d97757;
   --color-secondary: #6b6b6b;
   --color-accent: #da7756;
@@ -26,7 +26,7 @@
   --radius: 1rem;
   --border-width: 1px;
 
-  /* Element Plus Theme Override */
+  /* Element Plus Theme Override - Light */
   --el-color-primary: #d97757;
   --el-color-primary-light-1: #dd8568;
   --el-color-primary-light-2: #e19379;
@@ -46,6 +46,55 @@
   --el-text-color-secondary: #6b6b6b;
   --el-border-color-lighter: #e8ddd3;
   --el-color-danger: #d15648;
+}
+
+/* Dark Theme Colors */
+:root.dark {
+  --color-primary: #e68a6e;
+  --color-secondary: #a0a0a0;
+  --color-accent: #e68a6e;
+  --color-background: #1a1a1a;
+  --color-surface: #252525;
+  --color-text: #e5e5e5;
+  --color-muted: #7a7a7a;
+  --color-success: #6da375;
+  --color-warning: #e6b450;
+  --color-error: #e57364;
+  --color-info: #6ba7d1;
+
+  /* Element Plus Theme Override - Dark */
+  --el-color-primary: #e68a6e;
+  --el-color-primary-light-1: #ea977e;
+  --el-color-primary-light-2: #eea48e;
+  --el-color-primary-light-3: #f2b19e;
+  --el-color-primary-light-4: #f6beae;
+  --el-color-primary-light-5: #facbbe;
+  --el-color-primary-light-6: #fed8ce;
+  --el-color-primary-light-7: #ffe5de;
+  --el-color-primary-light-8: #fff2ee;
+  --el-color-primary-light-9: #fff9f6;
+  --el-color-primary-dark-2: #c96f56;
+  --el-bg-color: #1a1a1a;
+  --el-fill-color-light: #252525;
+  --el-fill-color-lighter: #2a2a2a;
+  --el-fill-color-darker: #151515;
+  --el-text-color-primary: #e5e5e5;
+  --el-text-color-secondary: #a0a0a0;
+  --el-border-color-lighter: #3a3a3a;
+  --el-color-danger: #e57364;
+}
+
+/* 暗黑模式下的滚动条样式 */
+:root.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+:root.dark ::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+}
+
+:root.dark ::-webkit-scrollbar-thumb:hover {
+  background: #555555;
 }
 
 /* 全局基础样式 */
@@ -69,6 +118,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--color-background);
   color: var(--color-text);
+  /* 平滑的主题过渡 */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img {
@@ -112,6 +163,7 @@ li {
   background: var(--color-background);
   color: var(--color-text);
   border: var(--border-width) solid var(--el-border-color-lighter);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .layout-main {
