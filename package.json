@@ -1,6 +1,6 @@
 {
   "name": "electron-template",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "description": "Modern Electron desktop application template with warm and elegant UI design.",
   "main": "main.js",

@@ -110,4 +110,11 @@ export default {
 .nav-item.active {
   @apply bg-primary text-surface shadow-primary;
 }
+
+.theme-toggle-btn {
+  @apply transition-all duration-200;
+}
+.theme-toggle-btn:hover {
+  @apply bg-fill-dark text-text;
+}
 </style>

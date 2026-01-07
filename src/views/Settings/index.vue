@@ -14,7 +14,7 @@
               <el-tooltip effect="dark" placement="right">
                 <template #content>
                   <div class="tooltip-content">
-                    启用后，点击关闭按钮会将窗口隐藏到系统托盘，而不是退出应用。<br>
+                    启用后，点击关闭按钮会将窗口隐藏到系统托盘，而不是退出应用。<br />
                     禁用后，点击关闭按钮将直接退出应用。
                   </div>
                 </template>
