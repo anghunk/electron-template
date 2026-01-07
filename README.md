@@ -2,7 +2,7 @@
 
 现代化的 Electron 桌面应用模板，采用温暖优雅的 UI 设计。
 
-![preview](https://github.com/user-attachments/assets/a5749b54-3688-48d6-9a4f-1b1fc4b54319)
+<img width="2559" height="1521" alt="image" src="https://github.com/user-attachments/assets/1b057e35-c238-4d6c-9a39-8893e9e29707" />
 
 ## 快速开始
 
