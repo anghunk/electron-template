@@ -64,6 +64,9 @@ function createWindow() {
 		frame: false, // Frameless window for custom title bar
 		icon: getIconPath(),
 		show: false, // Don't show until ready
+		// Windows 11+ 亚克力效果，提升视觉体验
+		vibrancy: process.platform === 'win32' ? 'appearance-based' : null,
+		visualEffectState: 'active',
 		webPreferences: {
 			preload: path.join(__dirname, 'preload.cjs'),
 			nodeIntegration: false,
@@ -155,9 +158,23 @@ ipcMain.on('window-minimize', () => {
 
 ipcMain.on('window-maximize', () => {
 	if (mainWindow?.isMaximized()) {
+		// 先隐藏窗口，再恢复，避免显示尺寸浮标
+		mainWindow.setOpacity(0);
 		mainWindow.unmaximize();
+		setTimeout(() => {
+			if (mainWindow) {
+				mainWindow.setOpacity(1);
+			}
+		}, 50);
 	} else {
-		mainWindow?.maximize();
+		// 先隐藏窗口，再最大化，避免显示尺寸浮标
+		mainWindow.setOpacity(0);
+		mainWindow.maximize();
+		setTimeout(() => {
+			if (mainWindow) {
+				mainWindow.setOpacity(1);
+			}
+		}, 50);
 	}
 });
 

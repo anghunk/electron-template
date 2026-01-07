@@ -10,7 +10,7 @@
       </div>
       <h1 class="font-heading text-[28px] font-bold text-text mb-4">Electron Template</h1>
       <p class="text-secondary max-w-[400px] mx-auto mb-6 leading-relaxed text-[15px]">
-        一个现代化的 Electron 应用模板，集成 Vue3、Vite 和 Element Plus。
+        一个现代化的 Electron 应用模板，集成 Vue3、Vite 和 Element Plus、Phosphor Icons。
       </p>
       <div class="flex gap-4 justify-center">
         <el-button type="primary" size="large">开始使用</el-button>
