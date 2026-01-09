@@ -1,32 +1,30 @@
 <template>
   <aside
-    class="w-[220px] h-[calc(100%-32px)] overflow-y-auto m-4 bg-surface flex flex-col rounded-theme shadow-card border border-border-light [&::-webkit-scrollbar]:hidden"
+    class="pb-2 w-[220px] h-[100%] overflow-y-auto my-4 flex flex-col [&::-webkit-scrollbar]:hidden border-r border-border-light"
   >
-    <nav class="flex-1 p-4 px-3 flex flex-col gap-1.5">
+    <nav class="flex-1 p-2 flex flex-col gap-1.5">
       <router-link to="/" class="nav-item" active-class="active">
         <span class="w-[25px] inline-flex items-center justify-center shrink-0">
           <PhHouseLine :size="18" weight="bold" />
         </span>
         <span class="flex-1 text-sm font-medium whitespace-nowrap">首页</span>
       </router-link>
-      <router-link to="/settings" class="nav-item" active-class="active">
-        <span class="w-[25px] inline-flex items-center justify-center shrink-0">
-          <PhGear :size="18" weight="bold" />
-        </span>
-        <span class="flex-1 text-sm font-medium whitespace-nowrap">设置</span>
-      </router-link>
-      <router-link to="/about" class="nav-item" active-class="active">
-        <span class="w-[25px] inline-flex items-center justify-center shrink-0">
-          <PhInfo :size="16" weight="bold" />
-        </span>
-        <span class="flex-1 text-sm font-medium whitespace-nowrap">关于</span>
-      </router-link>
     </nav>
 
     <!-- 暗黑模式切换按钮 - 放在左下角 -->
     <div class="p-4 pt-0">
       <div class="border-t border-border-light my-2"></div>
-      <div class="flex gap-2">
+      <div class="flex">
+        <router-link
+          active-class="active"
+          to="/settings"
+          class="icon-btn bg-fill-light flex items-center justify-center w-[35px] h-[35px] rounded-theme-sm relative"
+        >
+          <span class="w-[25px] inline-flex items-center justify-center shrink-0">
+            <PhGear :size="16" />
+          </span>
+        </router-link>
+
         <!-- 主题切换按钮 -->
         <button
           @click="cycleTheme"
@@ -36,6 +34,16 @@
           <!-- 主图标：根据状态显示不同图标 -->
           <component :is="getMainIcon()" :size="16" />
         </button>
+
+        <router-link
+          active-class="active"
+          to="/about"
+          class="icon-btn bg-fill-light flex items-center justify-center w-[35px] h-[35px] rounded-theme-sm relative"
+        >
+          <span class="w-[25px] inline-flex items-center justify-center shrink-0">
+            <PhInfo :size="16" />
+          </span>
+        </router-link>
       </div>
     </div>
   </aside>
@@ -116,5 +124,15 @@ export default {
 }
 .theme-toggle-btn:hover {
   @apply bg-fill-dark text-text;
+}
+
+.icon-btn {
+  @apply transition-all duration-200 text-secondary;
+}
+.icon-btn:hover {
+  @apply text-primary;
+}
+.icon-btn.active {
+  @apply text-primary;
 }
 </style>
