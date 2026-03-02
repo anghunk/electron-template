@@ -1,8 +1,8 @@
 # Electron Template
 
-现代化的 Electron 桌面应用模板，采用温暖优雅的 UI 设计。
+现代化的 Electron 桌面应用模板，采用 iOS 风格的现代蓝色主题。
 
-<img width="2559" height="1521" alt="image" src="https://github.com/user-attachments/assets/1b057e35-c238-4d6c-9a39-8893e9e29707" />
+<img width="2120" height="1349" alt="image" src="https://github.com/user-attachments/assets/b908c8ca-8cfc-4f86-a01a-96fabdfe033e" />
 
 ## 快速开始
 
