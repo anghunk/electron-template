@@ -4,7 +4,7 @@
     style="-webkit-app-region: drag"
   >
     <div
-      class="px-4 font-heading text-xs text-secondary font-semibold flex items-center gap-2"
+      class="px-4 font-heading text-xs font-semibold flex items-center gap-2"
     >
       <img src="@/assets/images/icon.png" alt="Electron Template" class="w-4 h-4" />
       Electron Template

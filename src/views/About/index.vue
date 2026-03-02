@@ -19,7 +19,7 @@
             <a
               href="mailto:anghunk@gmail.com"
               target="_blank"
-              class="text-primary no-underline transition-colors duration-200 hover:text-accent"
+              class="text-primary no-underline transition-colors duration-200"
             >
               anghunk@gmail.com
             </a>
@@ -31,7 +31,7 @@
             <a
               href="https://github.com/anghunk"
               target="_blank"
-              class="text-primary no-underline transition-colors duration-200 hover:text-accent"
+              class="text-primary no-underline transition-colors duration-200"
             >
               https://github.com/anghunk
             </a>
@@ -43,7 +43,7 @@
             <a
               href="https://github.com/anghunk/electron-template"
               target="_blank"
-              class="text-primary no-underline transition-colors duration-200 hover:text-accent"
+              class="text-primary no-underline transition-colors duration-200"
             >
               https://github.com/anghunk/electron-template
             </a>
